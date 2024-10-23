@@ -1,0 +1,16 @@
+{
+	"name": "react-dotnet",
+	"private": true,
+	"workspaces": [
+		"backend",
+		"frontend"
+	],
+	"scripts": {
+		"start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+		"start:backend": "cd backend && dotnet watch",
+		"start:frontend": "cd frontend && npm run dev"
+	},
+	"devDependencies": {
+		"concurrently": "^9.0.1"
+	}
+}
